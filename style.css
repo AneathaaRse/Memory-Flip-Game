@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: plum;
+}
+
+.wrapper {
+    width: 420px;
+    height: 420px;
+    background: #f8f8f8;
+    border-radius: 10px;   
+    padding: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+
+.card {
+    position: relative;
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    cursor: pointer;
+    perspective: 800px;
+}
+
+.view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform 0.25s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.front-view {
+    transform: rotateY(0deg);
+}
+
+.back-view {
+    transform: rotateY(180deg);
+}
+
+.card.flip .front-view {
+    transform: rotateY(180deg);
+}
+
+.card.flip .back-view {
+    transform: rotateY(0deg);
+}
+
+.card img {
+    width: 50px;
+    height: auto;
+}
+
+.card.shake {
+    animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 80% {
+        transform: translateX(-8px);
+    }
+    40%, 60% {
+        transform: translateX(8px);
+    }
+}
+.score-board {
+    font-size: 24px;
+    margin: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.score-board {
+    font-size: 24px;
+    margin: 20px;
+    color: #333;
+    text-align: center;
+}
+
+
+.score-board {
+    font-size: 24px;
+    margin: 20px;
+    color: #333;
+    text-align: center;
+}
+
+#reset-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    border-radius: 5px;
+}
+
+#reset-btn:hover {
+    background-color:red;
+}
